@@ -34,9 +34,9 @@ body {
     color: black;
 }
 
-#form{
-    width:300px;
-    height:300px;
+#tabela{
+    width:500px;
+    height:500px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -44,4 +44,5 @@ body {
     right: 2%;
     bottom: 1%;
     color: black;
+    overflow-y: auto;
 }

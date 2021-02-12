@@ -15,9 +15,13 @@ fetch("json/lpi.json")
    
    var tabel = "<table>";
    tabel += "<tr><td>COMANDOS</td></tr>"
-   for(var i = 0; i < coMandos.length; i++){
-    tabel += "<td>"+`\n ${coMandos[i]} \n`+"</td>";
-   }
+ 
+   coMandos.forEach(osComandos => {
+     console.log(osComandos);
+    tabel += "<li>" +`${osComandos} \n` + "<li>" ;
+  });
+  
+   
    tabel += "</table>"; 
    document.querySelector('#tabela').innerHTML = tabel;
    
