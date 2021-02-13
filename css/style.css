@@ -45,4 +45,6 @@ body {
     bottom: 1%;
     color: black;
     overflow-y: auto;
+    overflow-x: auto;
+    list-style:none;
 }
