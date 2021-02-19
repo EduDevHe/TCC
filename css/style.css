@@ -35,16 +35,60 @@ body {
 }
 
 #tabela{
-    width:500px;
-    height:500px;
+    width:600px;
+    height:400px;
+    margin-right:px;
     position: absolute;
     bottom: 0;
     right: 0;
     background-color: white;
-    right: 2%;
+    right: 8%;
     bottom: 1%;
     color: black;
     overflow-y: auto;
     overflow-x: auto;
-    list-style:none;
+    margin: auto;
+    padding: 0%;
+  
 }
+
+#tabelaid {
+    
+
+    border-collapse: collapse;  
+    width: 100%;  
+    border-radius: 15px;  
+      
+}
+
+
+#tabelaid tbody tr {
+    
+    border-bottom: 1px solid #dbd8d8;
+    line-height: 30px;  
+    font-size: 18px;
+    color: rgb(19, 18, 18);
+    background-color: rgb(249, 248, 255);
+    text-align:center;
+    font-family: 'Balsamiq Sans', cursive;  
+
+}
+
+#tabelaid thead tr{
+    margin-left: 5px;
+    font-size: 25px ;
+    font-family: 'Fredoka One', cursive;
+    text-align:center   ;
+    background-color: rgba(176, 43, 180, 0.719);
+    color: white    ;
+    word-spacing: 20px;
+    height: 50px;
+    width: 50px;   
+}
+
+
+
+#tabelaid tbody tr:nth-last-of-type(even){
+    background-color: rgba(224, 223, 230, 0.582);
+}
+

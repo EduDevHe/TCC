@@ -17,6 +17,21 @@ fetch("json/lpi.json")
    //pega o json.funcoes e atribui em uma varivel
    var fuCoes = json.funcoes;
    
+  var tabel = "<table id=tabelaid   >";
+   tabel += "<thead> <tr> <th> COMANDO </th>";
+   tabel += "<th>  FUNÇÃO </th> </tr> <thead>";
+   tabel += "<tbody>";
+
+   for(var i = 0; i < coMandos.length;i++){
+     var c = coMandos[i];
+     var f = fuCoes[c];
+     tabel += " <tr>   <td> " +`${c}`+ "</td>  <td id=td> " + `${f}` + "</td>  </tr>";
+   }
+   tabel += "</tbody>";
+   tabel += "</table>"; 
+   document.querySelector('#tabela').innerHTML = tabel;
+   
+   /*
    //transforma o objeto json.funcoes em um array
    var arrayFuncoes =Object.keys(fuCoes);
    // mapeia o array
@@ -24,9 +39,9 @@ fetch("json/lpi.json")
      return arrayFuncoes + " " + fuCoes[arrayFuncoes];
    });
   console.log(mapaArrayFuncoes);
-  
-  var tabel = "<table>";
-   tabel += "<tr><td>COMANDOS</td></tr>";
+  */
+
+   /*
    // percorre o array comandos do json.comandos
    coMandos.forEach(osComandos => {
      //console.log(osComandos);
@@ -37,8 +52,10 @@ fetch("json/lpi.json")
     //console.log(asFuncoes);
     tabel += "<tr>" + "<li> " +`${asFuncoes} \n` + "<li>" + "</tr>"  ;
   });
+   */
+  
+  
+  
    
-   tabel += "</table>"; 
-   document.querySelector('#tabela').innerHTML = tabel;
    
  });
