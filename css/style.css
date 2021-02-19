@@ -42,8 +42,8 @@ body {
     bottom: 0;
     right: 0;
     background-color: white;
-    right: 8%;
-    bottom: 1%;
+    right: 1%;
+    bottom: 45%;
     color: black;
     overflow-y: auto;
     overflow-x: auto;
@@ -78,8 +78,9 @@ body {
     margin-left: 5px;
     font-size: 25px ;
     font-family: 'Fredoka One', cursive;
-    text-align:center   ;
-    background-color: rgba(176, 43, 180, 0.719);
+    text-align:center;
+    background: rgb(31,2,51);
+    background: linear-gradient(90deg, rgba(31,2,51,1) 8%, rgba(119,156,242,1) 50%, rgba(187,0,219,1) 100%);
     color: white    ;
     word-spacing: 20px;
     height: 50px;
@@ -90,5 +91,36 @@ body {
 
 #tabelaid tbody tr:nth-last-of-type(even){
     background-color: rgba(224, 223, 230, 0.582);
+    color: rgb(130, 17, 236);
 }
 
+.input{
+    width:600px;
+    height:310px;
+    right: 1%;
+    bottom: 1%;
+    margin-right:px;
+    position: absolute;
+    background: rgb(187,0,219);
+    background: linear-gradient(90deg, rgba(187,0,219,1) 0%, rgba(68,196,114,1) 0%, rgba(116,10,190,1) 100%, rgba(189,242,119,1) 100%);
+    
+    
+}
+.input-group{
+
+}
+
+#btn-criar{
+    top: 20%;
+    right: 1%;
+    left: 50%;
+    position: absolute;
+
+}
+
+#btn-deletar{
+    top: 20%;
+    left: 30%;
+    position: absolute;
+
+}

@@ -1,0 +1,24 @@
+{
+  "name": "tcc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduDevHe/TCC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduDevHe/TCC/issues"
+  },
+  "homepage": "https://github.com/EduDevHe/TCC#readme"
+}

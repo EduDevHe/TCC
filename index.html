@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    
+    
+    
     <style>
         body {
             background: url('img/planet.jpg') no-repeat center center fixed;
@@ -22,7 +27,7 @@
 <body> 
   <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="scripts/jquery.balloon.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 
   <div class="frame" id="frame">
@@ -39,6 +44,17 @@
       
     </div>
 
+
+    <div  class = "input" id="input">
+      <div class="input-group">
+        <span class="input-group-text">Comando e Função</span>
+        <input type="text" aria-label="First name" class="form-control" id="id-comando  " placeholder="Comando">
+        <input type="text" aria-label="Last name" class="form-control" id="id-funcao" placeholder="Função">
+      </div>       
+
+      <button type="button" class="btn btn-info" id="btn-criar">Criar</button>
+      <button type="button" class="btn btn-info" id="btn-deletar">Deletar</button>  
+    </div>    
 
 
 
