@@ -41,12 +41,12 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: white;
     right: 1%;
     bottom: 45%;
     color: black;
     overflow-y: auto;
     overflow-x: auto;
+    scroll-behavior: smooth;
     margin: auto;
     padding: 0%;
   
@@ -54,7 +54,7 @@ body {
 
 #tabelaid {
     
-
+   
     border-collapse: collapse;  
     width: 100%;  
     border-radius: 15px;  
@@ -101,8 +101,7 @@ body {
     bottom: 1%;
     margin-right:px;
     position: absolute;
-    background: rgb(187,0,219);
-    background: linear-gradient(90deg, rgba(187,0,219,1) 0%, rgba(68,196,114,1) 0%, rgba(116,10,190,1) 100%, rgba(189,242,119,1) 100%);
+
     
     
 }

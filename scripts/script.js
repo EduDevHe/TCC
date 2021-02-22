@@ -6,32 +6,8 @@ btn.addEventListener('click',(e)=>{
 })
 */
 
-//pega o json/lpi.json
-fetch("json/lpi.json")
- .then(function(resp){
-     return resp.json();
- })
- .then(function(json){
-   //pega o json.comando e atribui em uma variavel
-   var coMandos = json.comandos;
-   //pega o json.funcoes e atribui em uma varivel
-   var fuCoes = json.funcoes;
-   
-  var tabel = "<table id=tabelaid   >";
-   tabel += "<thead> <tr> <th> COMANDO </th>";
-   tabel += "<th>  FUNÇÃO </th> </tr> <thead>";
-   tabel += "<tbody>";
 
-   for(var i = 0; i < coMandos.length;i++){
-     var c = coMandos[i];
-     var f = fuCoes[c];
-     tabel += " <tr>   <td> " +`${c}`+ "</td>  <td id=td> " + `${f}` + "</td>  </tr>";
-   }
-   tabel += "</tbody>";
-   tabel += "</table>"; 
-   document.querySelector('#tabela').innerHTML = tabel;
-   
-   /*
+ /*
    //transforma o objeto json.funcoes em um array
    var arrayFuncoes =Object.keys(fuCoes);
    // mapeia o array
@@ -53,9 +29,71 @@ fetch("json/lpi.json")
     tabel += "<tr>" + "<li> " +`${asFuncoes} \n` + "<li>" + "</tr>"  ;
   });
    */
+
+
+
+//pega o json/lpi.json
+fetch("json/lpi.json")
+ .then(function(resp){
+     return resp.json();
+ })
+ .then(function(json){
+   //pega o json.comando e atribui em uma variavel
+   var coMandos = json.comandos;
+   //pega o json.funcoes e atribui em uma varivel
+   var fuCoes = json.funcoes;
+   
+   var coMandosNovos = json.comandosNovos;
+
+   var funCoesNovos = json.funcoesNovos;
+
+  var tabel = "<table id=tabelaid  class= table table-hover >";
+   tabel += "<thead> <tr> <th> COMANDO </th>";
+   tabel += "<th>  FUNÇÃO </th> </tr> <thead>";
+   tabel += "<tbody>";
+
+   for(var i = 0; i < coMandos.length;i++){
+     var c = coMandos[i];
+     var f = fuCoes[c];
+     tabel += " <tr>   <td> " +`${c}`+ "</td>  <td id=td> " + `${f}` + "</td>  </tr>";
+   }
+   tabel += "</tbody>";
+   tabel += "</table>"; 
+   document.querySelector('#tabela').innerHTML = tabel;
+
+  let btn = document.querySelector('#btn-criar');
+  let vinputC = document.querySelector('#id-comando');
+  let vinputF = document.querySelector('#id-funcao');
+ 
+
+
+   btn.addEventListener('click',(event)=>{
   
+     let inputComando = vinputC.value
+     let inputFucao = vinputF.value
+      
+    for(var i = 0 ; i < coMandos.length; i++){
+      var c = coMandos[i];
+      var f = fuCoes[c];
+
+      }
+
+      if(c !== inputComando && inputComando !== fuCoes.hasOwnProperty(c)){
+        coMandos.push(inputComando);
+        coMandosNovos.push(inputComando);
+
+    }
+    
+     //console.log(inputComando , inputFucao);
+    
+    
+  
+  
+   });
   
   
    
    
  });
+
+   
