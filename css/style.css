@@ -101,25 +101,37 @@ body {
     bottom: 1%;
     margin-right:px;
     position: absolute;
+    background-color: white;
 
     
     
 }
 .input-group{
-
+ 
 }
 
 #btn-criar{
-    top: 20%;
+    top: 40%;
     right: 1%;
-    left: 50%;
+    width: 300px;
+    left: 0%;
     position: absolute;
+    text-align: center;
 
 }
 
 #btn-deletar{
-    top: 20%;
-    left: 30%;
+    top: 80%;
+    left: 0%;
+    width: 300px;
     position: absolute;
+    text-align: center;
+}
 
+#btn-enviar{
+    top: 60%;
+    left: 0%;
+    width: 300px;
+    position: absolute;
+    text-align: center;
 }

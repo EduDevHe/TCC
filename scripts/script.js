@@ -45,7 +45,7 @@ fetch("json/lpi.json")
    
    var coMandosNovos = json.comandosNovos;
 
-   var funCoesNovos = json.funcoesNovos;
+   var fuCoesNovos = json.fucoesNovos;
 
   var tabel = "<table id=tabelaid  class= table table-hover >";
    tabel += "<thead> <tr> <th> COMANDO </th>";
@@ -81,10 +81,11 @@ fetch("json/lpi.json")
       if(c !== inputComando && inputComando !== fuCoes.hasOwnProperty(c)){
         coMandos.push(inputComando);
         coMandosNovos.push(inputComando);
-
+        fuCoes[inputComando]= inputFucao;
+        fuCoesNovos[inputComando]= inputFucao;
     }
-    
-     //console.log(inputComando , inputFucao);
+     console.log(coMandosNovos,coMandos,fuCoesNovos,fuCoes); 
+     console.log(inputComando , inputFucao);
     
     
   

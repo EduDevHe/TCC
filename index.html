@@ -46,14 +46,20 @@
 
 
     <div  class = "input" id="input">
-      <div class="input-group">
-        <span class="input-group-text">Comando e Função</span>
-        <input type="text"  class="form-control" id="id-comando" placeholder="Comando">
-        <input type="text" class="form-control" id="id-funcao" placeholder="Função">
-      </div>       
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">COMANDO:</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="id-comando">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">FUÇÃO:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="id-funcao">
+      </div>
 
       <button type="button" class="btn btn-success" id="btn-criar">Criar</button>
       <button type="button" class="btn btn-danger"   id="btn-deletar">Deletar</button>  
+      <button type="button" class="btn btn-primary" id = "btn-enviar">Enviar</button>
     </div>    
 
 
