@@ -78,12 +78,19 @@ fetch("json/lpi.json")
 
       }
 
+      if(inputComando === "" || inputFucao === ""){
+        alert("PRENCHA TODOS OS CAMPOS")
+      }else{
+
       if(c !== inputComando && inputComando !== fuCoes.hasOwnProperty(c)){
         coMandos.push(inputComando);
         coMandosNovos.push(inputComando);
         fuCoes[inputComando]= inputFucao;
         fuCoesNovos[inputComando]= inputFucao;
+    }else{
+      alert("COMANDO OU FUNÇÃO JA EXISTENTE")
     }
+  }
      console.log(coMandosNovos,coMandos,fuCoesNovos,fuCoes); 
      console.log(inputComando , inputFucao);
     
