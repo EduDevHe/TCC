@@ -41,11 +41,11 @@ fetch("json/lpi.json")
    //pega o json.comando e atribui em uma variavel
    var coMandos = json.comandos;
    //pega o json.funcoes e atribui em uma varivel
-   var fuCoes = json.funcoes;
+   var funCoes = json.funcoes;
    
    var coMandosNovos = json.comandosNovos;
 
-   var fuCoesNovos = json.fucoesNovos;
+   var funCoesNovos = json.fucoesNovos;
 
   var tabel = "<table id=tabelaid  class= table table-hover >";
    tabel += "<thead> <tr> <th> COMANDO </th>";
@@ -54,27 +54,28 @@ fetch("json/lpi.json")
 
    for(var i = 0; i < coMandos.length;i++){
      var c = coMandos[i];
-     var f = fuCoes[c];
+     var f = funCoes[c];
      tabel += " <tr>   <td> " +`${c}`+ "</td>  <td id=td> " + `${f}` + "</td>  </tr>";
    }
    tabel += "</tbody>";
    tabel += "</table>"; 
    document.querySelector('#tabela').innerHTML = tabel;
 
-  let btn = document.querySelector('#btn-criar');
+  let btnCriar = document.querySelector('#btn-criar');
+  let btnDeletar = document.querySelector('#btn-deletar');
   let vinputC = document.querySelector('#id-comando');
   let vinputF = document.querySelector('#id-funcao');
  
 
-
-   btn.addEventListener('click',(event)=>{
   
-     let inputComando = vinputC.value
-     let inputFucao = vinputF.value
-      
+   
+   btnCriar.addEventListener('click',(event)=>{
+    let inputComando = vinputC.value
+    let inputFucao = vinputF.value
+    
     for(var i = 0 ; i < coMandos.length; i++){
       var c = coMandos[i];
-      var f = fuCoes[c];
+      var f = funCoes[c];
 
       }
 
@@ -82,16 +83,16 @@ fetch("json/lpi.json")
         alert("PRENCHA TODOS OS CAMPOS")
       }else{
 
-      if(c !== inputComando && inputComando !== fuCoes.hasOwnProperty(c)){
+      if(c !== inputComando && inputComando !== funCoes.hasOwnProperty(c)){
         coMandos.push(inputComando);
         coMandosNovos.push(inputComando);
-        fuCoes[inputComando]= inputFucao;
-        fuCoesNovos[inputComando]= inputFucao;
+        funCoes[inputComando]= inputFucao;
+        funCoesNovos[inputComando]= inputFucao;
     }else{
       alert("COMANDO OU FUNÇÃO JA EXISTENTE")
     }
   }
-     console.log(coMandosNovos,coMandos,fuCoesNovos,fuCoes); 
+     console.log(coMandosNovos,coMandos,funCoesNovos,funCoes); 
      console.log(inputComando , inputFucao);
     
     
@@ -99,7 +100,30 @@ fetch("json/lpi.json")
   
    });
   
-  
+   btnDeletar.addEventListener('click',(event)=>{
+    let inputComando = vinputC.value
+    let inputFucao = vinputF.value
+    for(var i = 0; i < coMandosNovos.length; i++){
+      var cN = coMandosNovos[i];
+      
+      for(var i = 0 ; i < coMandos.length; i++){
+       var c = coMandos[i]; 
+
+       if(inputComando === c && cN === inputComando){
+          coMandos.splice(coMandos.indexOf(inputComando),1);
+          coMandosNovos.splice(coMandosNovos.indexOf(inputComando),1);
+          delete funCoes[inputComando];
+          delete funCoesNovos[inputComando];
+        
+        //coMandos.splice(coMandos.indexOf(inputComando),1);        
+      }
+
+    }
+  }
+
+    console.log(coMandos, coMandosNovos,funCoes,funCoesNovos);
+
+   }); 
    
    
  });
