@@ -63,6 +63,7 @@ fetch("json/lpi.json")
 
   let btnCriar = document.querySelector('#btn-criar');
   let btnDeletar = document.querySelector('#btn-deletar');
+  let btnEnviar = document.querySelector('#btn-enviar');
   let vinputC = document.querySelector('#id-comando');
   let vinputF = document.querySelector('#id-funcao');
  
@@ -80,7 +81,7 @@ fetch("json/lpi.json")
       }
 
       if(inputComando === "" || inputFucao === ""){
-        alert("PRENCHA TODOS OS CAMPOS")
+        alert("PREENCHA TODOS OS CAMPOS")
       }else{
 
       if(c !== inputComando && inputComando !== funCoes.hasOwnProperty(c)){
@@ -89,11 +90,11 @@ fetch("json/lpi.json")
         funCoes[inputComando]= inputFucao;
         funCoesNovos[inputComando]= inputFucao;
     }else{
-      alert("COMANDO OU FUNÇÃO JA EXISTENTE")
+      alert("COMANDO OU FUNÇÃO JÁ EXISTENTE")
     }
   }
-     console.log(coMandosNovos,coMandos,funCoesNovos,funCoes); 
-     console.log(inputComando , inputFucao);
+    // console.log(coMandosNovos,coMandos,funCoesNovos,funCoes); 
+    //s console.log(inputComando , inputFucao);
     
     
   
@@ -121,11 +122,28 @@ fetch("json/lpi.json")
     }
   }
 
-    console.log(coMandos, coMandosNovos,funCoes,funCoesNovos);
+    //console.log(coMandos, coMandosNovos,funCoes,funCoesNovos);
 
    }); 
    
-   
+   btnEnviar.addEventListener('click',(event)=>{
+
+    let NewComands = JSON.stringify(json);
+
+    console.log(text)    
+  
+  
+  
+  
+  });
+
+
+
+
+
+
+
+
  });
 
    
