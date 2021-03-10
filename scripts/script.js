@@ -23,7 +23,7 @@ btn.addEventListener('click',(e)=>{
      //console.log(osComandos);
     tabel += "<li> " +`${osComandos} \n` + "<li>" ;
   });
-  //percorre o objeto funcoes que foi tansformado em array
+  //percorre o objeto funcoes que foi tansformado em array 
   mapaArrayFuncoes.forEach(asFuncoes =>{
     //console.log(asFuncoes);
     tabel += "<tr>" + "<li> " +`${asFuncoes} \n` + "<li>" + "</tr>"  ;
@@ -115,7 +115,7 @@ fetch("json/lpi.json")
           coMandosNovos.splice(coMandosNovos.indexOf(inputComando),1);
           delete funCoes[inputComando];
           delete funCoesNovos[inputComando];
-        
+        alert("COMANDO E FUNÇÃO DELETADOS COM SUCESSO")
         //coMandos.splice(coMandos.indexOf(inputComando),1);        
       }
 
@@ -125,12 +125,18 @@ fetch("json/lpi.json")
     //console.log(coMandos, coMandosNovos,funCoes,funCoesNovos);
 
    }); 
-   
+    
    btnEnviar.addEventListener('click',(event)=>{
+    let inputComando = vinputC.value
+    let inputFucao = vinputF.value
 
+    /*if(inputComando === "" && inputFucao == ""){
+      alert("PREENCHA TODOS OS CAMPOS")
+    */
+    
     let NewComands = JSON.stringify(json);
 
-    console.log(text)    
+    console.log(NewComands);    
   
   
   
