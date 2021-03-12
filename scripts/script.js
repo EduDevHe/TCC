@@ -93,54 +93,75 @@ fetch("json/lpi.json")
       alert("COMANDO OU FUNÇÃO JÁ EXISTENTE")
     }
   }
-    // console.log(coMandosNovos,coMandos,funCoesNovos,funCoes); 
-    //s console.log(inputComando , inputFucao);
+     console.log(coMandosNovos,coMandos,funCoesNovos,funCoes); 
+     console.log(inputComando , inputFucao);
     
     
-  
-  
+      
    });
   
-   btnDeletar.addEventListener('click',(event)=>{
+    btnDeletar.addEventListener('click',(event)=>{
     let inputComando = vinputC.value
     let inputFucao = vinputF.value
+
+
+      if(inputComando !== ""){
+
+        coMandosNovos.forEach(cmn =>{
+          console.log(cmn);
+          if(inputComando === cmn){
+            coMandosNovos.splice(coMandosNovozs.indexOf(inputComando),1);
+            delete funCoes[inputComando];
+          }if(inputComando !== ""){
+            coMandos.forEach(cm=>{
+              if(inputComando === cm){
+                coMandos.splice(coMandos.indexOf(inputComando),1);
+                delete funCoesNovos[inputComando];
+              }
+            });
+          }
+          console.log(coMandosNovos,coMandos,funCoesNovos,funCoes);
+
+        });
+
+
+      }
+
+/*
+      //codigo quebrado;
     for(var i = 0; i < coMandosNovos.length; i++){
       var cN = coMandosNovos[i];
-      
+   
+
       for(var i = 0 ; i < coMandos.length; i++){
        var c = coMandos[i]; 
 
        if(inputComando === c && cN === inputComando){
-          coMandos.splice(coMandos.indexOf(inputComando),1);
-          coMandosNovos.splice(coMandosNovos.indexOf(inputComando),1);
-          delete funCoes[inputComando];
-          delete funCoesNovos[inputComando];
-        alert("COMANDO E FUNÇÃO DELETADOS COM SUCESSO")
+        coMandos.splice(coMandos.indexOf(inputComando),1);
+        coMandosNovos.splice(coMandosNovos.indexOf(inputComando),1);
+        delete funCoes[inputComando];
+        delete funCoesNovos[inputComando];
         //coMandos.splice(coMandos.indexOf(inputComando),1);        
       }
 
     }
   }
-
-    //console.log(coMandos, coMandosNovos,funCoes,funCoesNovos);
+*/
+    //console.log(coMandosNovos,coMandos,funCoesNovos,funCoes);
 
    }); 
     
    btnEnviar.addEventListener('click',(event)=>{
-    let inputComando = vinputC.value
-    let inputFucao = vinputF.value
+    
 
     /*if(inputComando === "" && inputFucao == ""){
       alert("PREENCHA TODOS OS CAMPOS")
     */
-    
-    let NewComands = JSON.stringify(json);
-
-    console.log(NewComands);    
-  
-  
-  
-  
+      let NewComands = JSON.stringify(json);
+      console.log(NewComands);
+      var form = '<input type="text" name="dados" maxlength=100000 value="'+NewComands+'">';
+      
+      document.querySelector('#form').innerHTML = form;  
   });
 
 

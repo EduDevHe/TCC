@@ -136,3 +136,7 @@ body {
     position: absolute;
     text-align: center;
 }
+
+#div-oculta{
+    display: none;
+}
