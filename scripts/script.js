@@ -110,11 +110,11 @@ fetch("json/lpi.json")
         coMandosNovos.forEach(cmn =>{
           console.log(cmn);
           if(inputComando === cmn){
-            coMandosNovos.splice(coMandosNovozs.indexOf(inputComando),1);
+            coMandosNovos.splice(coMandosNovos.indexOf(inputComando),1);
             delete funCoes[inputComando];
           }if(inputComando !== ""){
             coMandos.forEach(cm=>{
-              if(inputComando === cm){
+              if(inputComando === cm && cm === cmn){
                 coMandos.splice(coMandos.indexOf(inputComando),1);
                 delete funCoesNovos[inputComando];
               }
